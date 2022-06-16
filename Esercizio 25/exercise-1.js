@@ -1,24 +1,33 @@
-function person(firstName, lastName){
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.getFirstName = function(){
+const person = {
+  firstName:"",
+  lastName:"",
+  getfirstName : function(){
     return this.firstName;
-  }
-  this.setFirstName = function (new_Name){
-    this.firstName=new_Name;
-  }
-  this.getLastName = function(){
+  },
+  getlastName : function(){
     return this.lastName;
+  },
+  setfirstName : function(fname){
+    this.firstName=fname;
+  },
+  setlastName : function(lname){
+    this.lastName=lname;
+  },
+  getlastName : function(){
+    return this.lastName;
+  },
+  fullName: function(){
+    return (`${this.getfirstName()} ${this.getlastName()}`);
   }
-  this.setLastName = function (new_LastName){
-    this.lastName=new_LastName;
-  }
-  this.fullName = function(){
-    return this.getFirstName() + " " + this.getLastName();
-  }
-}
 
-let john = new person('John','Doe');
-let simon = new person('Simon', 'Collins');
+}
+const john = Object.create(person);
+john.setfirstName("John");
+john.setlastName("Doe");
+
+const simon = Object.create(person);
+simon.setfirstName("Simon");
+simon.setlastName("Collins");
+
 console.log(john.fullName()); // John Doe
 console.log(simon.fullName()); // Simon Collins

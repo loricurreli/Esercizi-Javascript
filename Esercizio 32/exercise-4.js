@@ -1,19 +1,13 @@
 function uncompletedNotes(notes) {
   let uncomplete = [];
-  for (note in notes){  // analizzo una nota alla volta
-    let uncompleted = false; //booleano per capire se ci sono note non completata
-    for (task in notes[note].todos){  // analizzo tutti i task di una nota
-      if (!notes[note].todos[task].done){ //task non completato
-        uncompleted = true;  // uncompleted diventa true perchè c'è un task non completo
-    }
+  notes.forEach(note => {   
     
-  }
-  if (uncompleted){   // se c'è un task non completato la nota va segnata uncomplited
-    uncomplete.push(notes[note]);
-  }
+    let uncompleted = note.todos.filter(task => task.done==false);  //cerco tra i task quelli non completati
+    if (uncompleted.length!=0){  // inserisco i task non completati sull'array da restituire
+      uncomplete.push(note);
+    }
+    });
   
-
-  }
   return uncomplete;
 }
 

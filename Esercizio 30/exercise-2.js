@@ -1,10 +1,6 @@
 function nicknameMap(persons) {
-  let nicks=[];
-  for (person in persons){
-    let nickname = {nickname : persons[person].name + "-" + persons[person].age};
-    nicks.push(nickname);
-  }
-
+  let nicks = [];
+  persons.forEach(person => { nicks.push({nickname : person.name + "-" + person.age})})
   return nicks;
 }
 

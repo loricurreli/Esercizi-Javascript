@@ -1,14 +1,6 @@
 function uncompletedNotes(notes) {
-  let uncomplete = [];
-  notes.forEach(note => {   
-    
-    let uncompleted = note.todos.filter(task => task.done==false);  //cerco tra i task quelli non completati
-    if (uncompleted.length!=0){  // inserisco i task non completati sull'array da restituire
-      uncomplete.push(note);
-    }
-    });
-  
-  return uncomplete;
+  let uncompleted = notes.filter(note => note.todos.some((task => task.done === false)));  
+  return uncompleted;
 }
 
 const notes = [

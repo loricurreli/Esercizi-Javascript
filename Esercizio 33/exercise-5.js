@@ -1,20 +1,6 @@
 function firstUncompletedNote(notes) {
-  let uncomplete = [];
-  for (note in notes){  // analizzo una nota alla volta
-    let uncompleted = false; //booleano per capire se ci sono note non completata
-    for (task in notes[note].todos){  // analizzo tutti i task di una nota
-      if (!notes[note].todos[task].done){ //task non completato
-        uncompleted = true;  // uncompleted diventa true perchè c'è un task non completo
-    }
-    
-  }
-  if (uncompleted){   // se c'è un task non completato la nota va segnata uncomplited, e la restituisco essendo la prima
-    uncomplete.push(notes[note]);
-    return uncomplete;
-  }
-
-  }
-  
+  let uncompleted = notes.find(note => note.todos.some((task => task.done === false)));  
+  return uncompleted;
 }
 
 const notes = [

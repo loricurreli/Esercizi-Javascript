@@ -1,33 +1,30 @@
 const person = {
   firstName:"",
   lastName:"",
-  getfirstName : function(){
+  get nome() {
     return this.firstName;
   },
-  getlastName : function(){
+  get cognome() {
     return this.lastName;
   },
-  setfirstName : function(fname){
-    this.firstName=fname;
+  set nome(new_name) {
+    this.firstName = new_name;
   },
-  setlastName : function(lname){
-    this.lastName=lname;
-  },
-  getlastName : function(){
-    return this.lastName;
+  set cognome(new_lname) {
+    this.lastName = new_lname;
   },
   fullName: function(){
-    return (`${this.getfirstName()} ${this.getlastName()}`);
+    return (`${this.nome} ${this.cognome}`);
   }
 
 }
 const john = Object.create(person);
-john.setfirstName("John");
-john.setlastName("Doe");
+john.nome = "John"
+john.cognome = "Doe";
 
 const simon = Object.create(person);
-simon.setfirstName("Simon");
-simon.setlastName("Collins");
+simon.nome = "Simon";
+simon.cognome = "Collins";
 
 console.log(john.fullName()); // John Doe
 console.log(simon.fullName()); // Simon Collins

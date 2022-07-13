@@ -1,0 +1,34 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Hero's List</h2>
+      <ul class="hero-list">
+        <li class="hero-list-item">Batman</li>
+        <li class="hero-list-item">Superman</li>
+        <li class="hero-list-item">Spiderman</li>
+        <li class="hero-list-item">Hulk</li>
+        <li class="hero-list-item">Wolverine</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  let item = document.querySelectorAll(".hero-list-item");
+  
+  for(let i = 0; i<item.length; i++){
+    item[i].addEventListener("mouseover", evidenzia);
+    function evidenzia(){
+    item[i].style.background = 'red';
+    item[i].style.width = 'max-content';
+
+  }}
+  for(let i = 0; i<item.length; i++){
+    item[i].addEventListener("mouseout", removecolor);
+    function removecolor(){
+      item[i].style.background = 'transparent';
+  }
+  }
+  
+  
+</script>

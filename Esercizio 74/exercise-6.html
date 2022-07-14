@@ -1,0 +1,76 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  window.addEventListener("load", initForm);
+  
+  const button = document.querySelector("button");
+  button.addEventListener("click",submitPersonForm);
+
+
+
+  function initForm(){
+    const div1 = document.createElement("div");
+    const labelFName = document.createElement("label");
+    labelFName.innerText ="firstName ";
+    labelFName.setAttribute("for","nome");
+    const inputFName = document.createElement("input");
+    inputFName.setAttribute("type","text");
+    inputFName.setAttribute("id","nome");
+    div1.append(labelFName);
+    div1.append(inputFName);
+    button.before(div1);
+
+
+
+    const div2 = document.createElement("div");
+    const labelLName = document.createElement("label");
+    labelLName.innerText ="lastName ";
+    labelLName.setAttribute("for","cognome");
+    const inputLName = document.createElement("input");
+    inputLName.setAttribute("type","text");
+    inputLName.setAttribute("id","cognome");
+    div2.append(labelLName);
+    div2.append(inputLName);
+    div1.after(div2);
+
+
+    const div3 = document.createElement("div");
+    const age = document.createElement("label");
+    age.innerText ="age ";
+    age.setAttribute("for","age");
+    const inputAge = document.createElement("input");
+    inputAge.setAttribute("type","number");
+    inputAge.setAttribute("id","age");
+    inputAge.setAttribute("min","0");
+    div3.append(age);
+    div3.append(inputAge);
+    div2.after(div3);
+
+  }
+
+
+  function submitPersonForm(){
+    event.preventDefault();
+    const name = document.getElementById("nome").value;
+    const lName = document.getElementById("cognome").value;
+    const age = document.getElementById("age").value;
+    const person = {
+      firstName : name,
+      lastName : lName,
+      age: age
+    };
+    console.log(person);
+
+  }
+</script>
+
+

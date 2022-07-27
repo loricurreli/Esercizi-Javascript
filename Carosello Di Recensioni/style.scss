@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    body{
+        height: 100vh;
+        .reviews{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .container-review{
+                display: flex;
+                flex-direction: column;
+                height: max-content;
+                background-color: rgb(231, 224, 224);
+                align-items: center;
+                padding: 2rem;
+                width: 30%;
+                row-gap: 2rem;
+                .title{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 0.5rem;
+                    h1{
+                        font-size: 2.5rem;
+                    }
+                    .underline{
+                        width: 4rem;
+                        border-bottom: 4px solid rgb(0, 119, 255);
+                    }
+                }
+                .review-content{
+                    border-radius: 10px;
+                    box-shadow: 4px 4px 4px 4px lightgrey;
+                    background-color: white;
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1.5rem;
+                    align-items: center;
+                    .photo{
+                        height: 190px;
+                        width: 170px;
+                        img{
+                            border-radius: 50%;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    .data{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .role{
+                            color: rgb(0, 187, 255);
+                            text-transform: uppercase;
+                        }
+                    }
+                    .buttons{
+                        display: flex;
+                        column-gap: 2rem;
+                        button{
+                            cursor: pointer;
+                            border: none;
+                            background-color: white;
+                        }
+                        .prev{
+                            svg{
+                            transform: rotate(180deg);
+                        }}
+                    }
+                    .surprise{
+                        button{
+                            color: rgb(0, 187, 255);
+                            cursor: pointer;
+                            border-radius: 10px;
+                            font-size: 1rem;
+                            padding: 0.5rem;
+                            border: 2px solid rgb(0, 187, 255);
+                    }}
+                }
+            }
+        }
+    }
+}

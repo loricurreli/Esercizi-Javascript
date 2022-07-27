@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    body{
+        height: 100vh;
+        .container{
+            display: flex;
+            height: 100%;
+            .hamburger-menu{
+                order: 1;
+                flex-grow: 1;
+                display: flex;
+                justify-content: flex-end;
+                padding: 2rem 1rem;
+                svg{
+                    fill: rgb(0, 136, 255);
+                    cursor: pointer;
+                    animation: bouncing 2s ease-in-out infinite;
+                }
+                @keyframes bouncing { 
+                    0% {transform: scale(1);}
+                    50% {transform: scale(1.5);}
+                    100% {transform: scale(1);}
+                } 
+                
+            }
+            .show-sidebar{
+                transform: translate(0);
+                transition-duration: 1s;
+            }
+            aside{
+                background-color: lightgrey;
+                transform: translate(-100%);
+                transition-duration: 1s;
+                padding: 1rem 0 1rem 0;
+                width: 300px;
+                height: 100%;
+                .title{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1rem;
+                    font-size: 2rem;
+                    span{
+                        color: rgb(62, 136, 165);
+                    }
+                    .close{
+                        cursor: pointer;
+                    }
+                    
+                }
+                .voices{
+                    padding: 1rem 0 1rem 0;
+                    width: 100%;
+                    .options{
+                        list-style-type: none;
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 1.5rem;
+                        li{
+                            padding: 1rem 2rem 1rem 2rem;
+                            a{
+                                color: black;
+                                text-decoration: none;
+                            }
+                            &:hover{
+                                background-color: lightskyblue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+    .close-animation{
+        @keyframes rotate { 
+            0%  { transform: none; } 
+            10% { transform: rotate(90deg); } 
+            20% { transform: rotate(180deg); } 
+            30% { transform: rotate(270deg); } 
+            40% { transform: rotate(360deg); } 
+            50% { transform: rotate(90deg); } 
+            60% { transform: rotate(180deg); } 
+            70% { transform: rotate(270deg); } 
+            80% { transform: rotate(360deg); } 
+            90% { transform: rotate(90deg); } 
+            100% { transform: rotate(180deg); } 
+        } 
+        animation-name: rotate;
+        animation-duration: 1.3s; 
+        animation-delay: 0;
+        animation-direction: normal; 
+        animation-fill-mode: forwards; 
+    }
+}
+
+

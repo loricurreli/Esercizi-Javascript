@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    body{
+        height: 100vh;
+        .counter{
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 3rem;
+            header{
+                h1{
+                    font-size: 5.5rem;
+                }
+            }
+            .number{
+                font-size: 6rem;
+                font-weight: 800;
+            }
+            .buttons{
+                display: flex;
+                column-gap: 2rem;
+                button{
+                    font-size: 1.5rem;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}

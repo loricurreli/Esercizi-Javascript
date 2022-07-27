@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* body {
+  height: 100vh;
+}
+* body .reviews {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body .reviews .container-review {
+  display: flex;
+  flex-direction: column;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: rgb(231, 224, 224);
+  align-items: center;
+  padding: 2rem;
+  width: 30%;
+  row-gap: 2rem;
+}
+* body .reviews .container-review .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+* body .reviews .container-review .title h1 {
+  font-size: 2.5rem;
+}
+* body .reviews .container-review .title .underline {
+  width: 4rem;
+  border-bottom: 4px solid rgb(0, 119, 255);
+}
+* body .reviews .container-review .review-content {
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 4px lightgrey;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  align-items: center;
+}
+* body .reviews .container-review .review-content .photo {
+  height: 190px;
+  width: 170px;
+}
+* body .reviews .container-review .review-content .photo img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+* body .reviews .container-review .review-content .data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+* body .reviews .container-review .review-content .data .role {
+  color: rgb(0, 187, 255);
+  text-transform: uppercase;
+}
+* body .reviews .container-review .review-content .buttons {
+  display: flex;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+* body .reviews .container-review .review-content .buttons button {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+* body .reviews .container-review .review-content .buttons .prev svg {
+  transform: rotate(180deg);
+}
+* body .reviews .container-review .review-content .surprise button {
+  color: rgb(0, 187, 255);
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 2px solid rgb(0, 187, 255);
+}/*# sourceMappingURL=style.css.map */

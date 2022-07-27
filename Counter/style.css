@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* body {
+  height: 100vh;
+}
+* body .counter {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+}
+* body .counter header h1 {
+  font-size: 5.5rem;
+}
+* body .counter .number {
+  font-size: 6rem;
+  font-weight: 800;
+}
+* body .counter .buttons {
+  display: flex;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+* body .counter .buttons button {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.5rem;
+}/*# sourceMappingURL=style.css.map */
